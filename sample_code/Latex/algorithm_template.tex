@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\begin{document}
+
+\begin{algorithm}
+\caption{Simple LiDAR Obstacle Avoidance System}
+\begin{algorithmic}[1]
+    \Procedure{ObstacleAvoidance}{$d_F, d_L, d_R, battery$}
+        \While{$battery > BATTERY\_THRESHOLD$}
+            \If{$d_F > DISTANCE\_THRESHOLD$}
+                \State $v_L \gets BASE\_SPEED$
+                \State $v_R \gets BASE\_SPEED$
+            \Else
+                \If{$d_L > d_R$}
+                    \State $v_L \gets -BASE\_SPEED$
+                    \State $v_R \gets BASE\_SPEED$
+                \Else
+                    \State $v_L \gets BASE\_SPEED$
+                    \State $v_R \gets -BASE\_SPEED$
+                \EndIf
+            \EndIf
+        \State $\textproc{SetVelocity}(v_L, v_R)$
+        \EndWhile
+    \EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\end{document}
+
