@@ -55,7 +55,7 @@ LiDAR가 뒤를 0°로 보도록 장착되어 있다.
 
 ## 5. 알고리즘
 
-![LiDAR Obstacle Avoidance 알고리즘](algorithm.png)
+![LiDAR Obstacle Avoidance 알고리즘](images/algorithm.png)
 
 ### 동작 흐름 예시
 
